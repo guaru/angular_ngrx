@@ -1,0 +1,8 @@
+   <!-- This section should be hidden by default and shown when there are todos -->
+   <section class="main">
+    <input id="toggle-all" class="toggle-all" type="checkbox" (click)="toggleAll()">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul class="todo-list">
+       <app-todo-item *ngFor="let todo of todos | filtroTodos:filtroActual" [todo]="todo"></app-todo-item>
+    </ul>
+</section>
